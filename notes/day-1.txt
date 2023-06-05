@@ -1,0 +1,15 @@
+1. JavaScript - basics and advanced and TypeScript
+2. New features in JS
+3. Node JS
+4. modular programming in JS
+5. web app development
+		- tools
+
+Front-end framework:
+Angular, React and Next JS, Vue
+
+RESTful API/server-side:
+Node JS + Express JS, Nest JS
+
+
+https://github.com/joydip-git/siemens-angular-5thJune2023
