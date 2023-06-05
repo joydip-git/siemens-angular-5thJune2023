@@ -5,12 +5,17 @@
   "scripts": {
     "create": "tsc --init",
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "execute": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "joydip",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.2.5",
     "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.6"
   }
 }

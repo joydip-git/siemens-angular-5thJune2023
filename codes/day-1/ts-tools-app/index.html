@@ -6,10 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App</title>
+    <link rel="stylesheet" href="./styles/theme.css">
 </head>
 
 <body>
-    <script src="./dist/index.js"></script>
+    <div class="container" style="margin-top: 30px;">
+        <form>
+            <div class="row">
+                <label for="txtId">Enter Id: &nbsp;</label>
+                <input class="form-control" type="number" id="txtId">
+            </div>
+            <div class="row">
+                <label for="txtName">Enter Name: &nbsp;</label>
+                <input type="text" class="form-control" id="txtName">
+            </div>
+            <div class="row">
+                <label for="txtSalary">Enter Salary: &nbsp;</label>
+                <input type="number" class="form-control" id="txtSalary">
+            </div>
+            <div style="text-align: center;margin-top: 20px;">
+                <input id="btnSubmit" type="button" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+        <br>
+        <br>
+        <table class="table table-hover">
+            <thead style="background-color: burlywood;">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="personTbdoy" class="table-dark">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./node_modules/requirejs/require.js" data-main="./dist/index.js"></script>
 </body>
 
 </html>

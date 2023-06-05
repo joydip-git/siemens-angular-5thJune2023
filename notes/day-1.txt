@@ -2,8 +2,10 @@
 2. New features in JS
 3. Node JS
 4. modular programming in JS
-5. web app development
-		- tools
+5. web app development artifacts
+		- tools (transpiler)
+		- @types
+		- module loader
 
 Front-end framework:
 Angular, React and Next JS, Vue
@@ -97,7 +99,24 @@ to fix issues:
 to create tsconfig.json=>
 >tsc --init
 
+Module: public API to expose assets of one file to outside
 
+Different module formats:
+1. Common JS format:(default module format of Node JS)
+export: module.exports = {...}
+import: var exportsObject = require('....')
+
+2. ES6 module format:
+export: export member-name
+import: import {} from ''
+
+3. Asynchronous Module Definition (AMD)
+4. Universal Module Definition (UMD)
+
+Module loaders:
+requirejs (understands only AMD module format out of all)
+systemjs
+commonjs module loader (pat of Node JS runtime)
 
 
 
