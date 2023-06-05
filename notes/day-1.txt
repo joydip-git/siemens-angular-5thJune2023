@@ -28,3 +28,82 @@ data types: number, string, object, boolean
 Scripting language guideline: ECMAScript (ECMA)
 
 
+Transpilation and Transpiler:
+Conversion of 
+	a. latest JS code to older possible JS code: babel
+	b. TS code to older possible JS code: tsc
+
+
+class DataService{
+	public Employee[] GetEmployees(){
+		return new Employee[]{ new Employee(1,"Anil",1000),new Employee(2,"Sunil",2000)};
+	}
+}
+
+<?xml version=1.0....>
+<employees>
+<employee>
+	<id>1</id>
+	<name>1</name>
+	<salary>1</salary>
+</employee>
+<employee>
+	<id>2</id>
+	<name>sunil</name>
+	<salary>2000</salary>
+</employee>
+
+</employees>
+
+
+[{
+	"name":"Anil",
+	"id":1,	
+	"salary":1000
+},
+{
+	"name":"Sunil",
+	"id":2,	
+	"salary":2000
+}]
+
+{"first":10, "second":20}
+
+{ "result":30}
+
+NPM:
+dev dependency:
+>npm i <package-name> -D
+old:
+>npm i <package-name> --save-dev
+
+complete dependency:
+>npm i <package-name>
+old:
+>npm i <package-name> --save
+
+to create package.json=>
+>npm init
+or
+>npm init --yes
+
+to find issues:
+>npm audit 
+
+to fix issues:
+>npm audit fix --force
+
+
+to create tsconfig.json=>
+>tsc --init
+
+
+
+
+
+
+
+
+
+
+

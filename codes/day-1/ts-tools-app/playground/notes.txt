@@ -1,0 +1,78 @@
+/*
+//object: object literal syntax
+const anilObjRef = {
+    name: 'Anil',
+    id: 1,
+    salary: 1000,
+    print: function () {
+        //templated string (string interpolation)
+        return `name=${this.name},
+        salary=${this.salary},
+        id=${this.id}
+        `
+    }
+}
+
+//object: constructor function syntax
+function person(id: number, name: string, salary: number) {
+    var info;
+    this.name = name;
+    this.id = id;
+    this.salary = salary;
+    this.print = function () {
+        //templated string (string interpolation)
+        info = `name=${this.name},
+        salary=${this.salary},
+        id=${this.id}
+        `
+        return info
+    }
+}
+
+const sunilObjRef = new person(2, "sunil", 2000)
+*/
+
+
+//object: class, constructor keywords
+
+class Person {
+
+    /*
+    private _name: string;
+    private _id: number;
+    private _salary: number;
+
+    constructor(_id: number, _name: string, _salary: number) {
+        this._name = name;
+        this._id = id;
+        this._salary = salary;
+    }
+*/
+    constructor(private _id: number, private _name: string, private _salary: number) {
+    }
+
+    public get salary(): number {
+        return this._salary;
+    }
+    public set salary(value: number) {
+        this._salary = value;
+    }
+    public get name(): string {
+        return this._name;
+    }
+    public set name(value: string) {
+        this._name = value;
+    }
+    public get id(): number {
+        return this._id;
+    }
+    public set id(value: number) {
+        this._id = value;
+    }
+    print() {
+        return `name=${this._name},
+        salary=${this._salary},
+        id=${this._id}
+        `
+    }
+}

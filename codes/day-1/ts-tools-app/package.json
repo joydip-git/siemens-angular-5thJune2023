@@ -1,0 +1,16 @@
+{
+  "name": "ts-tools-app",
+  "version": "1.0.0",
+  "description": "simple ts app",
+  "scripts": {
+    "create": "tsc --init",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}
