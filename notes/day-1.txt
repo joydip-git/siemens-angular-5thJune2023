@@ -13,3 +13,18 @@ Node JS + Express JS, Nest JS
 
 
 https://github.com/joydip-git/siemens-angular-5thJune2023
+
+Ryan Dahl
+
+JS engines:
+chrome: V8
+safari: JSCore
+firefox: spidermonkey
+
+JavaScript:
+data types: number, string, object, boolean
+(undefined, NaN, NULL, Infinity)
+
+Scripting language guideline: ECMAScript (ECMA)
+
+
