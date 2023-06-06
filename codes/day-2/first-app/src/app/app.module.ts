@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { SampleComponent } from "./sample.component";
+import { CalculatorComponent } from "./calculator/calculator.component";
 
 @NgModule({
     //register components, directives and pipes
-    declarations: [AppComponent, SampleComponent],
+    declarations: [AppComponent, CalculatorComponent],
     //register providers for services
     providers: [],
     //register built-in or application feature modules
