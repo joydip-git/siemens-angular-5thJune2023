@@ -1,4 +1,44 @@
 Global installation folder of NPM packages: C:\Users\joydip\AppData\Roaming\npm
 Install angular cli tool: >npm i @angular/cli -g
 
-1. Angular 
+1. Angular:
+	a. Components: view + code (class)
+	b. Directives:(class)
+	c. Pipes: (class) contains transformation logic
+	d. Services: (class) any commonly used data access/business logic
+	e. Modules: (class) where you register assets of that feature module
+
+	component, pipe, directive, service, module
+
+	a. single instance for one asset
+	b. single instance for all assets of a feature module
+	c. single instance for entire application
+
+
+	a. all source codes will be transpiled
+	b. all transpiled codes will be put into a single JS file
+	c. also the package will contain core dependencies
+			i. all angular packages will be clubbed into single js file [including angular runtime]
+			ii. all 3rd party packages will be clubbed into one JS file
+	d. all the CSS files will be clubbed together into a single CSS file
+	e. polyfills.js
+
+
+Binding:
+	a. data binding:
+			direction of data flow: code => view
+			i. syntax: {{ <property-name> }} => interpolation
+			ii. syntax: <element [target-attribute]="property-name"> => property binding
+
+	b.	event binding:
+			direction of data flow: code <= view
+			syntax: <element (event-name)="method([args])">
+							method([args]){}
+
+
+template reference variable:stores the reference of the template's DOM object
+<element #var-name>
+
+
+<element style="width:200px"
+	

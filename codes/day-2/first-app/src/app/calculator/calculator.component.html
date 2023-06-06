@@ -1,11 +1,20 @@
+<h2>
+    {{title}}
+</h2>
 <div>
     <label for="txtFirst">First: &nbsp; </label>
-    <input type="text" id="txtFirst">
+    <input type="text" id="txtFirst" value="{{first}}" [style.width.px]="width" (keyup)="updateFirst(firsttxt.value)"
+        #firsttxt>
 </div>
 <div>
     <label for="txtSecond">Second: &nbsp; </label>
-    <input type="text" id="txtSecond">
+    <input type="text" id="txtSecond" value="{{second}}" [style.width.px]="width" #secondtxt
+        (keyup)="updateSecond(secondtxt.value)">
 </div>
 <div>
-    <input type="button" value="Add">
+    <input type="button" value="Add" (click)="add()">
+</div>
+<div>
+    <label for="txtResult">Result: &nbsp; </label>
+    <input type="text" id="txtResult" [value]="result" readonly>
 </div>
