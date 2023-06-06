@@ -1,0 +1,4 @@
+Global installation folder of NPM packages: C:\Users\joydip\AppData\Roaming\npm
+Install angular cli tool: >npm i @angular/cli -g
+
+1. Angular 
