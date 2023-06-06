@@ -1,0 +1,11 @@
+<tr>
+    <td colspan="2" style="text-align: center;">{{designationName}}</td>
+</tr>
+<tr *ngFor="let e of employees">
+    <td>
+        <input type="text" id="txtName" value="{{e.name}}" (keyup)="nameChanged(nametxt.value,e.id)" #nametxt>
+    </td>
+    <td>
+        <input type="text" value="{{e.salary}}" (keyup)="salaryChanged(saltxt.value, e.id)" #saltxt>
+    </td>
+</tr>

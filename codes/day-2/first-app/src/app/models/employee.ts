@@ -5,6 +5,7 @@
 // }
 
 export interface Employee {
+    designation: string;
     id: number;
     name: string;
     salary: number;

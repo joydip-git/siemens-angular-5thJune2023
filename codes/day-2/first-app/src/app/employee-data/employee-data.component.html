@@ -1,4 +1,4 @@
-<ng-template #norecord>
+<!-- <ng-template #norecord>
     <span>No record found</span>
 </ng-template>
 <div *ngIf="employeeObj && employeeObj.length>0;else norecord">
@@ -16,4 +16,29 @@
             <input type="text" id="txtSalary" [value]="obj.salary">
         </div>
     </div>
-</div>
+</div> -->
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <div *ngFor="let rs of resultSet">
+            <tr>
+                <td colspan="2">{{rs.key}}</td>
+            </tr>
+            <tr *ngFor="let e of rs.list">
+                <td>{{e.name}}</td>
+                <td>{{e.salary}}</td>
+            </tr> 
+
+        </div>
+        -->
+        <div *ngFor="let rs of resultSet">
+            <app-employee-row [designation]="rs.key" [records]="rs.list"
+                (employeeUpdated)="reciveUpdatedObject($event)"></app-employee-row>
+        </div>
+    </tbody>
+</table>
