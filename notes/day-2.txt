@@ -40,5 +40,35 @@ template reference variable:stores the reference of the template's DOM object
 <element #var-name>
 
 
-<element style="width:200px"
+<element style="width:200px">
+
+
+
+directive:
+<element *ngFor="let x of colletion">
+<div>.....
+</element>
+
+
+@Directive({selector:'[ngFor]'})
+export class NgForDirective{
+	method(collection){}
+}
+
+@NgModule({ declarations:[NgForDirective]})
+export class CommonModule{
+}
+
+@NgModule({ imports:[CommonModule], exports:[CommonModule]})
+export class BrowserModule{
+}
+
+directives:
+a. structural directive: manipulates DOM (@angular/common)
+<element *ngFor="let x of colletion">
+*ngSwitch, *ngIf, *ngIfElse, *ngFor
+b. attribute directive: extends the behavior of the element
+<element ngClass/ngStyle/ngForm/ngModel>
+
+c. component directive: for view
 	

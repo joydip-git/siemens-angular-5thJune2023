@@ -1,12 +1,19 @@
-<div>
-    <label for="txtId">Id: &nbsp;</label>
-    <input type="text" id="txtId" [value]="employeeObj.id" readonly>
-</div>
-<div>
-    <label for="txtName">Name: &nbsp;</label>
-    <input type="text" id="txtName" [value]="employeeObj.name">
-</div>
-<div>
-    <label for="txtSalary">Salary: &nbsp;</label>
-    <input type="text" id="txtSalary" [value]="employeeObj.salary">
+<ng-template #norecord>
+    <span>No record found</span>
+</ng-template>
+<div *ngIf="employeeObj && employeeObj.length>0;else norecord">
+    <div *ngFor="let obj of employeeObj">
+        <div>
+            <label for="txtId">Id: &nbsp;</label>
+            <input type="text" id="txtId" [value]="obj.id" readonly>
+        </div>
+        <div>
+            <label for="txtName">Name: &nbsp;</label>
+            <input type="text" id="txtName" [value]="obj.name">
+        </div>
+        <div>
+            <label for="txtSalary">Salary: &nbsp;</label>
+            <input type="text" id="txtSalary" [value]="obj.salary">
+        </div>
+    </div>
 </div>
