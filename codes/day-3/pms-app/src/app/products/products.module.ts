@@ -6,8 +6,27 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { FilterItemsComponent } from './components/filter-items/filter-items.component';
+import { Routes, RouterModule } from '@angular/router';
 
-
+const productRoutes: Routes = [
+  {
+    path: 'products',
+    children: [
+      {
+        path: '', component: ProductListComponent
+      },
+      {
+        path: 'add', component: AddProductComponent
+      },
+      {
+        path: 'view/:id', component: ProductDetailComponent
+      },
+      {
+        path: 'update/:id', component: UpdateProductComponent
+      }
+    ]
+  }
+]
 
 @NgModule({
   declarations: [
@@ -19,7 +38,7 @@ import { FilterItemsComponent } from './components/filter-items/filter-items.com
     FilterItemsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, RouterModule.forChild(productRoutes)
   ]
 })
 export class ProductsModule { }

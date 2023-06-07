@@ -89,7 +89,7 @@ localhost:4200/home								HomeComponent
 
 localhost:4200/products							ProductListComponent [FilterItemsComponent 																						+ ProductTableComponent]
 localhost:4200/products/add					AddProductComponent
-localhost:4200/products/view/1				ProductDetailComponent
+localhost:4200/products/view?id=1				ProductDetailComponent
 localhost:4200/products/update/1			UpdateProductComponent
 
 localhost:4200/**									PageNotFoundComponent
@@ -101,7 +101,22 @@ directives:
 	component: router-outlet
 	attribute: routerLink
 
+services:
+	ActivatedRoute, RouterState, Router
+
 path matching strategy:
 full, prefix
+
+RouterState
+ActivatedRoute => params, queryParams
+ActivatedRoute => params, queryParams
+ActivatedRoute => params, queryParams
+ActivatedRoute => params, queryParams
+ActivatedRoute => params, queryParams
+
+{
+	id:100,
+	pid:200
+}
 
 			
