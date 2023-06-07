@@ -3,3 +3,66 @@
 3. pipe
 4. forms
 5. routing
+
+PMS APP:
+app
+	app.component.html
+	app.component.css
+	app.component.ts
+	app.module.ts
+
+	pms-common (folder)
+		pms-common.module.ts (file)
+		components (folder)
+			home (folder)
+				home.component.ts (HomeComponent)
+				home.component.html
+				home.component.css
+
+			dashboard (folder)
+				dashboard.component.ts (DashBoardComponent)
+				dashboard.component.html
+				dashboard.component.css
+
+			page-not-found (folder)
+				page-not-found.component.ts (PageNotFoundComponent)
+				page-not-found.component.html
+				page-not-found.component.css
+
+	products (folder)
+		products.module.ts
+		components (folder)
+			product-list
+			3. ProductListComponent 				localhost:4200/products					
+				filter-items
+				a. FilterItemsComponent
+				product-table
+				b. ProductTableComponent
+			add-product
+			4. AddProductComponent					localhost:4200/products/add
+			product-detail
+			5. ProductDetailComponent				localhost:4200/products/view/1
+			update-product
+			6. UpdateProductComponent				localhost:4200/products/update/1
+
+		pipes (folder)
+			product-filter.pipe.ts
+
+		services (folder)
+			product.service.ts
+
+		directives
+			password-validator.directive.ts
+
+
+NG CLI commands:
+>ng generate or >ng g
+
+module:
+>ng g m pms-common
+
+component:
+>ng g c pms-common/components/home --skip-tests
+
+
+			

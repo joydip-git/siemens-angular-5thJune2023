@@ -1,0 +1,16 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "AMD",
+    "target": "ES5",
+    "sourceMap": true,
+    "lib": [
+      "DOM",
+      "ES2022"
+    ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
