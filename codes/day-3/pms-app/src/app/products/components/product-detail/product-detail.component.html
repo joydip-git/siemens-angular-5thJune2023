@@ -1,1 +1,25 @@
-<p>product-detail works!</p>
+<br>
+<br>
+<ng-template #loading>
+    <span>Loading...please wait</span>
+</ng-template>
+<ng-template #error>
+    <span>{{errorMessage}}</span>
+</ng-template>
+<ng-template #norecord>
+    <app-alternate-template></app-alternate-template>
+</ng-template>
+
+
+<div *ngIf="loaded;else loading">
+    <div *ngIf="errorMessage==='';else error">
+        <div *ngIf="product;else norecord">
+
+            {{product.productName}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div>
+                <button [routerLink]="['/products/update']" type="button">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>

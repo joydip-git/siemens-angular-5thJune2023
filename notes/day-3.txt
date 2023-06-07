@@ -99,13 +99,13 @@ localhost:4200/**									PageNotFoundComponent
 
 RouterModule => @angular/routes
 
-types: Route, Routes (Route[])
+types: Route, Routes (Route[]), RouterState, ActivatedRouteSnapshot
 directives: 
 	component: router-outlet
 	attribute: routerLink
 
 services:
-	ActivatedRoute, RouterState, Router
+	ActivatedRoute, Router
 
 path matching strategy:
 full, prefix
@@ -156,9 +156,11 @@ Component LifeCycle:
 
 event-name			interface		method
 X						OnX				ngOnX
+changes				OnChanges		ngOnChanges
+init					OnInit			ngOnInit
 
-changes
-int
+changes (first time as well as everytime, when parent's updated data is passed to the nested)
+int (only one time, when the object gets created)
 ....
 destroy
 

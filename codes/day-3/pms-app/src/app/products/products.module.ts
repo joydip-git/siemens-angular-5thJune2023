@@ -11,6 +11,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { PRODUCT_SERVICE_TOKEN, SERVICE_TYPE } from '../constants/app-constants';
 import { AlternateTemplateComponent } from './components/alternate-template/alternate-template.component';
+import { StorageService } from './services/storage.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const productRoutes: Routes = [
   {
@@ -26,7 +28,7 @@ const productRoutes: Routes = [
         path: 'view/:id', component: ProductDetailComponent
       },
       {
-        path: 'update/:id', component: UpdateProductComponent
+        path: 'update', component: UpdateProductComponent
       }
     ]
   }
@@ -43,14 +45,15 @@ const productRoutes: Routes = [
     AlternateTemplateComponent
   ],
   imports: [
-    CommonModule, RouterModule.forChild(productRoutes), HttpClientModule
+    CommonModule, RouterModule.forChild(productRoutes), HttpClientModule, ReactiveFormsModule, FormsModule
   ],
   providers: [
     // ProductService
     {
       provide: PRODUCT_SERVICE_TOKEN,
       useClass: SERVICE_TYPE
-    }
+    },
+    StorageService
   ]
 })
 export class ProductsModule { }

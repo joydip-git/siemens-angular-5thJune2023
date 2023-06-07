@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { PmsCommonModule } from './pms-common/pms-common.module';
 import { ProductsModule } from './products/products.module';
 import { RouterModule } from '@angular/router';
-import { ProductService } from './products/services/product.service';
+
 
 @NgModule({
   declarations: [

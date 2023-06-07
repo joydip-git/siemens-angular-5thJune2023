@@ -1,1 +1,17 @@
-<p>update-product works!</p>
+<div *ngIf="product">
+    <div *ngIf="formObj">
+        <form [formGroup]="formObj" (submit)="update()">
+            <div>
+                <label for="txtId">Id:&nbsp;</label>
+                <input type="text" id="txtId" formControlName="productId">
+            </div>
+            <div>
+                <label for="txtName">Name:&nbsp;</label>
+                <input type="text" id="txtName" formControlName="productName">
+            </div>
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
