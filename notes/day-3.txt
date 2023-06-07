@@ -84,12 +84,21 @@ component:
 
 
 routes:
-localhost:4200
-localhost:4200/home
+localhost:4200										HomeComponent
+localhost:4200/home								HomeComponent
 
-localhost:4200/products
-localhost:4200/products/add
-localhost:4200/products/view/1
-localhost:4200/products/update/1
+localhost:4200/products							ProductListComponent [FilterItemsComponent 																						+ ProductTableComponent]
+localhost:4200/products/add					AddProductComponent
+localhost:4200/products/view/1				ProductDetailComponent
+localhost:4200/products/update/1			UpdateProductComponent
+
+localhost:4200/**									PageNotFoundComponent
+
+RouterModule => @angular/routes
+
+types: Route, Routes (Route[])
+directives: 
+	component: router-outlet
+	attribute: routerLink
 
 			
