@@ -82,6 +82,9 @@ module:
 component:
 >ng g c pms-common/components/home --skip-tests
 
+service:
+>ng g s servic-name
+
 
 routes:
 localhost:4200										HomeComponent
