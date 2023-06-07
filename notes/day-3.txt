@@ -30,21 +30,39 @@ app
 				page-not-found.component.css
 
 	products (folder)
-		products.module.ts
-		components (folder)
-			product-list
-			3. ProductListComponent 				localhost:4200/products					
-				filter-items
-				a. FilterItemsComponent
-				product-table
-				b. ProductTableComponent
-			add-product
-			4. AddProductComponent					localhost:4200/products/add
-			product-detail
-			5. ProductDetailComponent				localhost:4200/products/view/1
-			update-product
-			6. UpdateProductComponent				localhost:4200/products/update/1
+		products.module.ts (file)
+			components (folder)
 
+				product-list (folder)
+					product-list.component.html (ProuctListComponent)
+					product-list.component.css
+					product-list.component.ts
+
+				add-product (folder)
+					add-product.component.html
+					add-product.component.css
+					add-product.component.ts (AddProductComponent)
+
+				product-detail (file)
+					product-detail.component.html 
+					product-detail.component.css
+					product-detail.component.ts (ProductDetailComponent)
+
+				product-table
+					product-table.component.html
+					product-table.component.css
+ 					product-table.component.ts (ProductTableComponent)
+
+				update-product (folder)
+					update-product.component.html
+					update-product.component.css
+					update-product.component.ts (UpdateProductComponent)
+		
+				filter-items (folder)
+					filter-items.component.html
+					filter-items.component.css
+					filter-items.component.ts (FilterItemsComponent)
+	
 		pipes (folder)
 			product-filter.pipe.ts
 
@@ -64,5 +82,14 @@ module:
 component:
 >ng g c pms-common/components/home --skip-tests
 
+
+routes:
+localhost:4200
+localhost:4200/home
+
+localhost:4200/products
+localhost:4200/products/add
+localhost:4200/products/view/1
+localhost:4200/products/update/1
 
 			
