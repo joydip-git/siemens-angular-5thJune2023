@@ -1,0 +1,8 @@
+ const numbers = [1, 2, 3, 4]
+        const obs: Observable<number[]> = of(numbers)
+        const observerObj: Observer<number[]> = {
+            next: (data) => { console.log(data) },
+            error: (err: Error) => { console.log(err.message) },
+            complete: () => { console.log('on complete task') }
+        }
+        obs.subscribe(observerObj)

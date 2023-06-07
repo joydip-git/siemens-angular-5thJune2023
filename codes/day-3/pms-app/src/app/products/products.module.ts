@@ -8,6 +8,7 @@ import { ProductTableComponent } from './components/product-table/product-table.
 import { FilterItemsComponent } from './components/filter-items/filter-items.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductService } from './services/product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const productRoutes: Routes = [
   {
@@ -39,7 +40,7 @@ const productRoutes: Routes = [
     FilterItemsComponent
   ],
   imports: [
-    CommonModule, RouterModule.forChild(productRoutes)
+    CommonModule, RouterModule.forChild(productRoutes), HttpClientModule
   ],
   providers: [ProductService]
 })

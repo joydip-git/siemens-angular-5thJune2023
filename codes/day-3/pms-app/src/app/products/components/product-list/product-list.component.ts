@@ -14,6 +14,6 @@ export class ProductListComponent {
 
   constructor(private ps: ProductService) {
     // this.ps = ps
-    this.products = this.ps.getProducts()
+    //this.products = this.ps.getProducts()
   }
 }

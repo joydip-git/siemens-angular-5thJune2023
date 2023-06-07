@@ -122,4 +122,36 @@ ActivatedRoute => params, queryParams
 	pid:200
 }
 
+
+RESTful API request URLs:
+-----------------------------------------------------------------------------------------
+URL										method		data				response
+-----------------------------------------------------------------------------------------
+All Records:
+http://127.0.0.1:3003/products	GET			NA					{message:'', data:[{},{},...]}
+
+Single Record:
+http://127.0.0.1:3003/products/1	GET			pid				{message:'', data:{}}
+http://127.0.0.1:3003/products/1	GET			pid				{message:'', data:null}
+
+Adding new record:
+http://127.0.0.1:3003/products	POST			product			{message:'', data:[{},{},...]}
+http://127.0.0.1:3003/products	POST			product			{message:'', data:null}
+
+Updating existing record:
+http://127.0.0.1:3003/products/1	PUT			pid,product		{message:'', data:[{},{},...]}
+http://127.0.0.1:3003/products/1	PUT			pid,product		{message:'', data:null}
+
+Deleteing existing record:
+http://127.0.0.1:3003/products/1	DELETE		pid				{message:'', data:[{},{},...]}
+http://127.0.0.1:3003/products/1	DELETE		pid				{message:'', data:null}
+
+Http Requests:
+----------------------------------------
+built-in service class: HttpClient => .put(), .get(),.....
+module file:				HttpClientModule
+package: @angular/common/http
+
+
+
 			
