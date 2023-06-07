@@ -4,33 +4,37 @@
     <span>Loading...please wait</span>
 </ng-template>
 <ng-template #error>
-    <span>Error</span>
+    <span>{{errorMessage}}</span>
 </ng-template>
 <ng-template #norecord>
-    <span>No record found...</span>
+    <app-alternate-template></app-alternate-template>
 </ng-template>
 
-<div *ngIf="products;else norecord">
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let p of products">
-                <td>
-                    <img class="img-style" src="{{p.imageUrl}}" alt="NA">
-                </td>
-                <td>{{p.productName}}</td>
-                <td>{{p.price}}</td>
-                <td>
-                    <button type="button">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div *ngIf="loaded;else loading">
+    <div *ngIf="errorMessage==='';else error">
+        <div *ngIf="products && products.length>0;else norecord">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of products">
+                        <td>
+                            <img class="img-style" src="{{p.imageUrl}}" alt="NA">
+                        </td>
+                        <td>{{p.productName}}</td>
+                        <td>{{p.price}}</td>
+                        <td>
+                            <button type="button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

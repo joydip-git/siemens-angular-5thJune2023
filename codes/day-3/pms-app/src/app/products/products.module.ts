@@ -7,8 +7,10 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { FilterItemsComponent } from './components/filter-items/filter-items.component';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductService } from './services/product.service';
+//import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PRODUCT_SERVICE_TOKEN, SERVICE_TYPE } from '../constants/app-constants';
+import { AlternateTemplateComponent } from './components/alternate-template/alternate-template.component';
 
 const productRoutes: Routes = [
   {
@@ -37,11 +39,18 @@ const productRoutes: Routes = [
     ProductDetailComponent,
     ProductListComponent,
     ProductTableComponent,
-    FilterItemsComponent
+    FilterItemsComponent,
+    AlternateTemplateComponent
   ],
   imports: [
     CommonModule, RouterModule.forChild(productRoutes), HttpClientModule
   ],
-  providers: [ProductService]
+  providers: [
+    // ProductService
+    {
+      provide: PRODUCT_SERVICE_TOKEN,
+      useClass: SERVICE_TYPE
+    }
+  ]
 })
 export class ProductsModule { }

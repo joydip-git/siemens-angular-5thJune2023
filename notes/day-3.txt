@@ -152,6 +152,16 @@ built-in service class: HttpClient => .put(), .get(),.....
 module file:				HttpClientModule
 package: @angular/common/http
 
+Component LifeCycle:
+
+event-name			interface		method
+X						OnX				ngOnX
+
+changes
+int
+....
+destroy
+
 
 
 			
