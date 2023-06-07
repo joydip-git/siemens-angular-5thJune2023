@@ -101,4 +101,7 @@ directives:
 	component: router-outlet
 	attribute: routerLink
 
+path matching strategy:
+full, prefix
+
 			
