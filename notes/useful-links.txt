@@ -1,0 +1,23 @@
+1. JavaScript:
+a. https://javascript.info/
+b. https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+2. Advanced and JavaScript Internals:
+c. https://medium.com/@happymishra66/execution-context-in-javascript-319dd72e8e2c
+
+3. Node JS:
+d. https://nodejs.dev/en/learn/
+
+4. JavaScript modules:
+e. https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
+
+5. Reactive Programming and RxJS:
+f. https://reactivex.io/documentation/observable.html
+g. https://rxjs.dev/guide/overview
+
+6. TypeScript:
+h. https://www.typescriptlang.org/
+
+7. Angular:
+i. https://angular.io/docs
+j. https://www.udemy.com/course/the-complete-guide-to-angular-2/
